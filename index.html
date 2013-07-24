@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Compass retina sprites by Baires</title>
+    <title>Compass retina sprites by Restorando</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -20,9 +20,9 @@
   <body>
       <div id="header">
         <nav>
-          <li class="fork"><a href="https://github.com/Baires/compass-retina-sprites">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/Baires/compass-retina-sprites/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/Baires/compass-retina-sprites/tarball/master">TAR</a></li>
+          <li class="fork"><a href="https://github.com/restorando/compass-retina-sprites">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/restorando/compass-retina-sprites/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/restorando/compass-retina-sprites/tarball/master">TAR</a></li>
           <li class="title">DOWNLOADS</li>
         </nav>
       </div><!-- end header -->
@@ -34,36 +34,78 @@
           <h1>Compass retina sprites</h1>
           <p>An easy way to generate retina ready sprites</p>
           <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/Baires">Baires</a></span>
+          <span class="credits left">Project maintained by <a href="https://github.com/Restorando">Restorando</a></span>
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
         </div>
 
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>
+  This Compass extension will allow to create retina ready sprites from the scratch. Juast drop your images on the right folders, type some Compass mumble jumble and you are rady to go!
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+</p>
+
+<h2>
+  Installation
+</h2>
+
+<p><pre><code>gem installl compass-retina-sprites
+</code></pre>
+</p>
+
+<h2>
+  How to use it?
+</h2>
+
+<p>
+  Fisrt thing to do is drop your images in the right folders. In this case I have to folders <kbd>icons</kbd> and <kbd>icons-sprites</kbd> inside my image folder.
+</p>
+<p>
+  Next, we need to tell Compass where those image are. Add this line to <kbd>variables.saas</kbd> or somewhere else
+</p>
+
+<pre><code>$sprites:        sprite-map("icons/*.png")
+$sprites_retina: sprite-map("icons-sprites/*.png")
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>
+  Now we need to init awesomeness, add this line to your project:
+</p>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<pre><code>@import "compass-retina-sprites"
+</code></pre>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<h2>
+  Using the extension
+</h2>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<p>
+  You can pass a bouch of parameters to obtain the right result, some valid options are:
+</p>
+<pre><code>// This will import plain.png
+.plain
+  +sprite(plain)
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+// This will import boat.png, boat_hover.png and boat_active.png
+.boat
+  +sprite(boat, $hover_state: true, $active_state: true)
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+// This will import console.png plus 40px of padding on the sides
+.console
+  +sprite(console, $spacing: 40px)
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+// This will import people.png and it will not set any dimension on this elemments
+.people
+  +sprite(people, $dimensions: False)
+</code></pre>
+
+<h2>
+  Licence
+</h2>
+<p>Copyright (c) 2013 Restorando</p>
+<p>MIT License</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 
 <h3>
 <a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
@@ -73,6 +115,6 @@ $ git checkout gh-pages
 
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+
   </body>
 </html>
