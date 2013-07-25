@@ -1,7 +1,7 @@
 require 'compass'
-require 'compass-retina-sprites/version'
+require 'compass-retinator/version'
 
-Compass::Frameworks.register("compass-retina-sprites", :path => "#{File.dirname(__FILE__)}/..")
+Compass::Frameworks.register("compass-retinator", :path => "#{File.dirname(__FILE__)}/..")
 
-module CompassRetinaSprites
+module CompassRetinator
 end

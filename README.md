@@ -1,14 +1,14 @@
-## Compass Retina sprites
+## Compass Retinator
 
 This Compass extension will allow you to create retina ready sprites from scratch. Just drop your images on the right folders, type some Compass mumble jumble and you are ready to go!
 
 ##Installation
 
-    gem installl compass-retina-sprites
+    gem installl compass-retinator
 
 Now do a require in your Compass <kbd>config.rb</kbd>
 
-    require 'compass-retina-sprites'
+    require 'compass-retinator'
 
 ## How to use it?
 
@@ -22,7 +22,7 @@ Next, we need to tell Compass where those image are. Add this line to <kbd>varia
 
 Now we need to init awesomeness, add this line to your project:
 
-    @import "compass-retina-sprites"
+    @import "compass-retinator"
 
 ## Using the extension
 
