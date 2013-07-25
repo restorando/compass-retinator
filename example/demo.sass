@@ -1,15 +1,28 @@
+//Add compass
+@import compass
+
+// Compass-Rasils walkaround
+@import "icons/*.png"
+@import "icons-sprites/*.png"
+
+// My sprites
+$sprites:        sprite-map("icons/*.png", $spacing: 10px)
+$sprites_retina: sprite-map("icons-sprites/*.png", $spacing: 20px)
+
+@import compass_retina_sprites
+
 //Create a single button
 .my-button
   +sprite(my-button)
 
 //Create a single button withhover and active states
 .my-button-2
-  +sprite(.my-button-2, $hover_state: true, $active_state: true)
+  +sprite(my-button-2, $hover_state: true, $active_state: true)
 
 //Create a single button and add 40px of padding around
 .my-button-3
-  +sprite(.my-button-3, $spacing: 40px)
+  +sprite(my-button-3, $spacing: 40px)
 
 //Create a single button with no dimensions by default
 .my-button-4
-  +sprite(.my-button-3, $dimensions: false)
+  +sprite(my-button-3, $dimensions: false)
