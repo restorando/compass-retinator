@@ -1,8 +1,7 @@
 require 'compass'
-Compass::Frameworks.register("zocial", :path => "#{File.dirname(__FILE__)}/..")
+require 'compass-retina-sprites/version'
 
-module Compass-Retina-Sprites
+Compass::Frameworks.register("retina-sprites", :path => "#{File.dirname(__FILE__)}/..")
 
-  VERSION = "0.0.1"
-  DATE = "2013-24-07"
-
+module CompassRetinaSprites
+end
