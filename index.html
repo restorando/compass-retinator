@@ -40,7 +40,7 @@
 
 
 <p>
-  This Compass extension will allow to create retina ready sprites from the scratch. Juast drop your images on the right folders, type some Compass mumble jumble and you are rady to go!
+  This Compass extension will allow you to create retina ready sprites from the scratch. Juast drop your images on the right folders, type some Compass mumble jumble and you are ready to go!
 
 </p>
 
@@ -52,12 +52,22 @@
 </code></pre>
 </p>
 
+<p>
+  Now do a require in your Compass <kbd>config.rb</kbd>
+</p>
+
+
+<p><pre><code>require 'compass-retina-sprites'
+</code></pre>
+</p>
+
+
 <h2>
   How to use it?
 </h2>
 
 <p>
-  Fisrt thing to do is drop your images in the right folders. In this case I have to folders <kbd>icons</kbd> and <kbd>icons-sprites</kbd> inside my image folder.
+  Fisrt thing to do is drop your images on the right folders. In this case I have set two folders <kbd>icons</kbd> and <kbd>icons-sprites</kbd> inside my image folder.
 </p>
 <p>
   Next, we need to tell Compass where those image are. Add this line to <kbd>variables.saas</kbd> or somewhere else
@@ -79,7 +89,7 @@ $sprites_retina: sprite-map("icons-sprites/*.png")
 </h2>
 
 <p>
-  You can pass a bouch of parameters to obtain the right result, some valid options are:
+  You can pass several parameters to obtain the right result, some valid options are:
 </p>
 <pre><code>// This will import plain.png
 .plain
@@ -97,6 +107,57 @@ $sprites_retina: sprite-map("icons-sprites/*.png")
 .people
   +sprite(people, $dimensions: False)
 </code></pre>
+
+<h2>
+  Commmons Issues
+</h2>
+
+<h3>
+  The sprite position is wrong
+</h3>
+<p>
+  Please make you sure that your icons scale proportionally. If the non-retina icons are <strong>16x16</strong> your retina icons must be <strong>32x32</strong> and not <strong>30x32</strong> and definitely not <strong>45x34</strong>
+</p>
+
+<h3>
+  I'm getting a <i>compass can't convert nil into string</i> error
+</h3>
+
+<p>
+  You propabbly are running a rails app. This is a wierd issue with compass-rails. For some reason compass-rails does not create the sprites on demand and do not understand the <code>sprite-map</code>.
+</p>
+
+<p>
+  One walkaround is to tell to Compass to re-declare your sprites assets, so add this line at the top of your variables:
+</p>
+
+<p>
+  <pre><code>@import "icons/*.png"
+@import "icons-sprites/*.png"
+</code></pre>
+</p>
+
+<h3>
+  The smart layout doesn't seems to work properly
+</h3>
+
+<p>
+  Unfortunately Compass doesn't support extra options with this layout. Try to use the default layout or the horizontal layout.
+</p>
+
+<h3>
+  When I add some <i>spacing</i> to my sprite the sprite position is not right
+</h3>
+
+<p>
+  Please keept in mind that if you are adding extra padding around the sprite item you will also need to tell Compass to add some extra space on every sprite item. Just past the varible <code>$spacing: XXpx</code>
+</p>
+
+<p>
+<pre><code>$sprites:        sprite-map("icons/*.png", $spacing: 10px)
+$sprites_retina: sprite-map("icons-sprites/*.png", $spacing: 20px)
+</code></pre>
+</p>
 
 <h2>
   Licence
