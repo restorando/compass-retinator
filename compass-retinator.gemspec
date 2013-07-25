@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'compass-retinator/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "compass-retinator
+  spec.name          = "compass-retinator"
   spec.version       = CompassRetinator::VERSION
   spec.authors       = ["Restorando"]
   spec.email         = ["dev@restorando.com"]
