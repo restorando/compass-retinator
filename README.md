@@ -12,7 +12,7 @@ Now do a require in your Compass <kbd>config.rb</kbd>
 
 ## How to use it?
 
-Fisrt thing to do is drop your images on the right folders. In this case I have set two folders <kbd>icons</kbd> and <kbd>icons-sprites</kbd> inside my image folder.
+First thing to do is drop your images on the right folders. In this case I have set two folders <kbd>icons</kbd> and <kbd>icons-sprites</kbd> inside my image folder.
 
 Next, we need to tell Compass where those image are. Add this line to <kbd>variables.saas</kbd> or somewhere else
 
@@ -40,21 +40,21 @@ You can pass several parameters to obtain the right result, some valid options a
     .console
       +sprite(console, $spacing: 40px)
 
-    // This will import people.png and it will not set any dimension on this elemments
+    // This will import people.png and it will not set any dimension on this elements
     .people
       +sprite(people, $dimensions: False)
 
-## Commmons Issues
+## Common Issues
 
 ### The sprite position is wrong
 
-Please make you sure that your icons scale proportionally. If the non-retina icons are **16x16** your retina icons must be **32x32** and not **30x32** and definitely not **45x34**
+Please be sure that your icons scale proportionally. If the non-retina icons are **16x16** your retina icons must be **32x32** and not **30x32** and definitely not **45x34**
 
 ### I'm getting a _compass can't convert nil into string_ error
 
-You probably are running a rails app. This is a weird issue with compass-rails. For some reason compass-rails does not create the sprites on demand and do not understand the `sprite-map`.
+You're probably running a rails app. This is a weird issue with compass-rails. For some reason compass-rails does not create the sprites on demand and doesn't understand the `sprite-map`.
 
-One walkaround is to tell Compass to re-declare your sprites assets, so add this line at the top of your variables:
+One workaround is to tell Compass to re-declare your sprites assets, so add this line at the top of your variables:
 
     @import "icons/*.png"
     @import "icons-sprites/*.png"
@@ -65,7 +65,7 @@ Unfortunately Compass doesn't support extra options with this layout. Try to use
 
 ### When I add some _spacing_ to my sprite the sprite position is not right
 
-Please keept in mind that if you are adding extra padding around the sprite item you will also need to tell Compass to add some extra space on every sprite item. Just past the varible `$spacing: XXpx`
+Please, keep in mind, if you are adding extra padding around the sprite item, you will also need to tell Compass to add some extra space on every sprite item. Just past the varible `$spacing: XXpx`
 
     $sprites:        sprite-map("icons/*.png", $spacing: 10px)
     $sprites_retina: sprite-map("icons-sprites/*.png", $spacing: 20px)
