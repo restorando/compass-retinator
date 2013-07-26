@@ -20,9 +20,9 @@
   <body>
       <div id="header">
         <nav>
-          <li class="fork"><a href="https://github.com/restorando/compass-retina-sprites">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/restorando/compass-retina-sprites/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/restorando/compass-retina-sprites/tarball/master">TAR</a></li>
+          <li class="fork"><a href="https://github.com/restorando/compass-retinator">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/restorando/compass-retinator/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/restorando/compass-retinator/tarball/master">TAR</a></li>
           <li class="title">DOWNLOADS</li>
         </nav>
       </div><!-- end header -->
@@ -42,14 +42,13 @@
 <img src="images/retinator.png" alt="Compass Retinator">
 <p>
   This Compass extension will allow you to create retina ready sprites from scratch. Just drop your images on the right folders, type some Compass mumble jumble and you are ready to go!
-
 </p>
 
 <h2>
   Installation
 </h2>
 
-<p><pre><code>gem installl compass-retina-sprites
+<p><pre><code>gem installl compass-retinator
 </code></pre>
 </p>
 
@@ -58,7 +57,7 @@
 </p>
 
 
-<p><pre><code>require 'compass-retina-sprites'
+<p><pre><code>require 'compass-retinator'
 </code></pre>
 </p>
 
@@ -68,7 +67,7 @@
 </h2>
 
 <p>
-  Fisrt thing to do is drop your images on the right folders. In this case I have set two folders <kbd>icons</kbd> and <kbd>icons-sprites</kbd> inside my image folder.
+  First thing to do is drop your images on the right folders. In this case I have set two folders <kbd>icons</kbd> and <kbd>icons-sprites</kbd> inside my image folder.
 </p>
 <p>
   Next, we need to tell Compass where those image are. Add this line to <kbd>variables.saas</kbd> or somewhere else
@@ -110,14 +109,14 @@ $sprites_retina: sprite-map("icons-sprites/*.png")
 </code></pre>
 
 <h2>
-  Commmons Issues
+  Common Issues
 </h2>
 
 <h3>
   The sprite position is wrong
 </h3>
 <p>
-  Please make you sure that your icons scale proportionally. If the non-retina icons are <strong>16x16</strong> your retina icons must be <strong>32x32</strong> and not <strong>30x32</strong> and definitely not <strong>45x34</strong>
+  Please be sure that your icons scale proportionally. If the non-retina icons are <strong>16x16</strong> your retina icons must be <strong>32x32</strong> and not <strong>30x32</strong> and definitely not <strong>45x34</strong>
 </p>
 
 <h3>
@@ -125,11 +124,11 @@ $sprites_retina: sprite-map("icons-sprites/*.png")
 </h3>
 
 <p>
-  You probably are running a rails app. This is a weird issue with compass-rails. For some reason compass-rails does not create the sprites on demand and do not understand the <code>sprite-map</code>.
+  You're probably running a rails app. This is a weird issue with compass-rails. For some reason compass-rails does not create the sprites on demand and doesn't understand the <code>sprite-map</code>.
 </p>
 
 <p>
-  One walkaround is to tell Compass to re-declare your sprites assets, so add this line at the top of your variables:
+  One workaround is to tell Compass to re-declare your sprites assets, so add this line at the top of your variables:
 </p>
 
 <p>
@@ -151,7 +150,7 @@ $sprites_retina: sprite-map("icons-sprites/*.png")
 </h3>
 
 <p>
-  Please keept in mind that if you are adding extra padding around the sprite item you will also need to tell Compass to add some extra space on every sprite item. Just past the varible <code>$spacing: XXpx</code>
+  Please, keep in mind, if you are adding extra padding around the sprite item, you will also need to tell Compass to add some extra space on every sprite item. Just past the varible <code>$spacing: XXpx</code>
 </p>
 
 <p>
@@ -161,7 +160,7 @@ $sprites_retina: sprite-map("icons-sprites/*.png", $spacing: 20px)
 </p>
 
 <h2>
-  Licence
+  License
 </h2>
 <p>Copyright (c) 2013 Restorando</p>
 <p>MIT License</p>
@@ -169,10 +168,6 @@ $sprites_retina: sprite-map("icons-sprites/*.png", $spacing: 20px)
 <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
 <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
       </section>
 
     </div>
