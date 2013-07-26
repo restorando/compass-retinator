@@ -28,7 +28,7 @@ Now we need to init awesomeness, add this line to your project:
 
 You can pass several parameters to obtain the right result, some valid options are:
 
-  // This will import plain.png
+    // This will import plain.png
     .plain
       +sprite(plain)
 
@@ -70,7 +70,7 @@ Please, keep in mind, if you are adding extra padding around the sprite item, yo
     $sprites:        sprite-map("icons/*.png", $spacing: 10px)
     $sprites_retina: sprite-map("icons-sprites/*.png", $spacing: 20px)
 
-## Licence
+## License
 
 Copyright (c) 2013 Restorando
 
