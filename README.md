@@ -22,7 +22,7 @@ Next, we need to tell Compass where those image are. Add this line to <kbd>varia
 
 Now we need to init awesomeness, add this line to your project:
 
-    @import "compass-retinator"
+    @import compass_retinator
 
 ## Using the extension
 
