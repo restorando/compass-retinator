@@ -14,7 +14,7 @@ Now do a require in your Compass <kbd>config.rb</kbd>
 
 First thing to do is drop your images on the right folders. In this case I have set two folders <kbd>icons</kbd> and <kbd>icons-sprites</kbd> inside my image folder.
 
-Next, we need to tell Compass where those image are. Add this line to <kbd>variables.saas</kbd> or somewhere else
+Next, we need to tell Compass where those image are. Add this line to <kbd>variables.sass</kbd> or somewhere else
 
     $sprites:        sprite-map("icons/*.png")
     $sprites_retina: sprite-map("icons-sprites/*.png")
