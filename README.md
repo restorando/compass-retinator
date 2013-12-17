@@ -17,7 +17,7 @@ First thing to do is drop your images on the right folders. In this case I have 
 Next, we need to tell Compass where those image are. Add this line to <kbd>variables.sass</kbd> or somewhere else
 
     $sprites:        sprite-map("icons/*.png")
-    $sprites_retina: sprite-map("icons-sprites/*.png")
+    $sprites_retina: sprite-map("icons-retina/*.png")
 
 
 Now we need to init awesomeness, add this line to your project:
@@ -57,7 +57,7 @@ You're probably running a rails app. This is a weird issue with compass-rails. F
 One workaround is to tell Compass to re-declare your sprites assets, so add this line at the top of your variables:
 
     @import "icons/*.png"
-    @import "icons-sprites/*.png"
+    @import "icons-retina/*.png"
 
 ### The smart layout doesn't seems to work properly
 
@@ -68,7 +68,7 @@ Unfortunately Compass doesn't support extra options with this layout. Try to use
 Please, keep in mind, if you are adding extra padding around the sprite item, you will also need to tell Compass to add some extra space on every sprite item. Just past the varible `$spacing: XXpx`
 
     $sprites:        sprite-map("icons/*.png", $spacing: 10px)
-    $sprites_retina: sprite-map("icons-sprites/*.png", $spacing: 20px)
+    $sprites_retina: sprite-map("icons-retina/*.png", $spacing: 20px)
 
 ## License
 
