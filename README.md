@@ -12,7 +12,7 @@ Now do a require in your Compass <kbd>config.rb</kbd>
 
 ## How to use it?
 
-First thing to do is drop your images on the right folders. In this case I have set two folders <kbd>icons</kbd> and <kbd>icons-sprites</kbd> inside my image folder.
+First thing to do is drop your images on the right folders. In this case I have set two folders <kbd>icons</kbd> and <kbd>icons-retina</kbd> inside my image folder.
 
 Next, we need to tell Compass where those image are. Add this line to <kbd>variables.sass</kbd> or somewhere else
 
