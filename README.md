@@ -29,21 +29,21 @@ Now we need to init awesomeness, add this line to your project:
 You can pass several parameters to obtain the right result, some valid options are:
 
 ```sass
-    // This will import plain.png
-    .plain
-      +sprite(plain)
+// This will import plain.png
+.plain
+  +sprite(plain)
 
-    // This will import boat.png, boat_hover.png and boat_active.png
-    .boat
-      +sprite(boat, $hover_state: true, $active_state: true)
+// This will import boat.png, boat_hover.png and boat_active.png
+.boat
+  +sprite(boat, $hover_state: true, $active_state: true)
 
-    // This will import console.png plus 40px of padding on the sides
-    .console
-      +sprite(console, $spacing: 40px)
+// This will import console.png plus 40px of padding on the sides
+.console
+  +sprite(console, $spacing: 40px)
 
-    // This will import people.png and it will not set any dimension on this elements
-    .people
-      +sprite(people, $dimensions: False)
+// This will import people.png and it will not set any dimension on this elements
+.people
+  +sprite(people, $dimensions: False)
 ```
 
 ## Common Issues
@@ -58,8 +58,10 @@ You're probably running a rails app. This is a weird issue with compass-rails. F
 
 One workaround is to tell Compass to re-declare your sprites assets, so add this line at the top of your variables:
 
-    @import "icons/*.png"
-    @import "icons-retina/*.png"
+```sass
+@import "icons/*.png"
+@import "icons-retina/*.png"
+```
 
 ### The smart layout doesn't seems to work properly
 
@@ -69,8 +71,10 @@ Unfortunately Compass doesn't support extra options with this layout. Try to use
 
 Please, keep in mind, if you are adding extra padding around the sprite item, you will also need to tell Compass to add some extra space on every sprite item. Just past the varible `$spacing: XXpx`
 
-    $sprites:        sprite-map("icons/*.png", $spacing: 10px)
-    $sprites_retina: sprite-map("icons-retina/*.png", $spacing: 20px)
+```sass
+$sprites:        sprite-map("icons/*.png", $spacing: 10px)
+$sprites_retina: sprite-map("icons-retina/*.png", $spacing: 20px)
+```
 
 ## License
 
