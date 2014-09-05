@@ -8,7 +8,9 @@ This Compass extension will allow you to create retina ready sprites from scratc
 
 Now do a require in your Compass <kbd>config.rb</kbd>
 
-    require 'compass-retinator'
+```ruby
+require 'compass-retinator'
+```
 
 ## How to use it?
 
@@ -16,13 +18,16 @@ First thing to do is drop your images on the right folders. In this case I have 
 
 Next, we need to tell Compass where those image are. Add this line to <kbd>variables.sass</kbd> or somewhere else
 
-    $sprites:        sprite-map("icons/*.png")
-    $sprites_retina: sprite-map("icons-retina/*.png")
-
+```sass
+$sprites:        sprite-map("icons/*.png")
+$sprites_retina: sprite-map("icons-retina/*.png")
+```
 
 Now we need to init awesomeness, add this line to your project:
 
-    @import "compass_retinator"
+```sass
+@import "compass_retinator"
+```
 
 ## Using the extension
 
