@@ -28,6 +28,7 @@ Now we need to init awesomeness, add this line to your project:
 
 You can pass several parameters to obtain the right result, some valid options are:
 
+```sass
     // This will import plain.png
     .plain
       +sprite(plain)
@@ -43,6 +44,7 @@ You can pass several parameters to obtain the right result, some valid options a
     // This will import people.png and it will not set any dimension on this elements
     .people
       +sprite(people, $dimensions: False)
+```
 
 ## Common Issues
 
