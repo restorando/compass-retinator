@@ -4,7 +4,7 @@ This Compass extension will allow you to create retina ready sprites from scratc
 
 ##Installation
 
-    gem installl compass-retinator
+    gem install compass-retinator
 
 Now do a require in your Compass <kbd>config.rb</kbd>
 
